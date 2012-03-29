@@ -11,8 +11,12 @@ module RightScaleAPIHelper
     require 'net/http'
     require 'net/https'
 
-# Initialize the connection. Provide headers for later use
-    def initialize(account, username, password, format = 'xml')
+# Initialize the connection with account information. 
+    # Return an object that can then later be used to make calls
+    # against the RightScale API without authenticating again.
+    # Inputs:   format = xml or js 
+    #           version = 1.0 # 1.5 to be supported soon
+    def initialize(account, username, password, format = 'js', version = '1.0')
       # Set Default Variables
       rs_url = "https://my.rightscale.com"
       api_url = '/api/acct/'
@@ -22,8 +26,11 @@ module RightScaleAPIHelper
       @conn = Net::HTTP.new('my.rightscale.com', 443)
       @conn.use_ssl=true
       #@conn.verify_mode = OpenSSL::SSL::VERIFY_NONE
+      if version != '1.0'
+        raise("Only version 1.0 is supported")
+      end
 
-      req = Net::HTTP::Get.new("#{@full_api_call}/login?api_version=1.0")
+      req = Net::HTTP::Get.new("#{@full_api_call}/login?api_version=#{version}")
       req.basic_auth( username, password )
       resp = @conn.request(req)
       if resp.code.to_i != 204
