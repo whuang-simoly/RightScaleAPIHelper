@@ -6,9 +6,11 @@ This GEM is a simple wrapper for the RightScale API. It simplifies authenticatio
 Usage
 -----
   Create new instance 
-      RightScaleAPIHelper::Helper.new(acct_id, email, password, format=('js'/'xml'), version = 1.0)
+
+    RightScaleAPIHelper::Helper.new(acct_id, email, password, format=('js'/'xml'), version = 1.0)
 
   Example
+
     api_conn = RightScaleAPIHelper::Helper.new(123456, 'email@email.com', 'password')
 
     resp = api_conn.get("/deployments")
