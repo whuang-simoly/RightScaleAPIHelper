@@ -17,10 +17,10 @@ Jeweler::Tasks.new do |gem|
   gem.name = "RightScaleAPIHelper"
   gem.homepage = "http://github.com/evanwieren/RightScaleAPIHelper"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Simple wrapper for connecting to RightScale API and make Calls}
+  gem.description = %Q{Simple wrapper for connecting and using the RightScale API. Eases the use of connecting with a username and password, and then provides an object to do GET, PUT, POST, DELETE requests. Returns an HTTP response.}
   gem.email = "eric@codex.org"
-  gem.authors = ["evanwieren"]
+  gem.authors = ["Eric VanWieren"]
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
@@ -32,13 +32,13 @@ Rake::TestTask.new(:test) do |test|
   test.verbose = true
 end
 
-require 'rcov/rcovtask'
-Rcov::RcovTask.new do |test|
-  test.libs << 'test'
-  test.pattern = 'test/**/test_*.rb'
-  test.verbose = true
-  test.rcov_opts << '--exclude "gems/*"'
-end
+#require 'rcov/rcovtask'
+#Rcov::RcovTask.new do |test|
+#  test.libs << 'test'
+#  test.pattern = 'test/**/test_*.rb'
+#  test.verbose = true
+#  test.rcov_opts << '--exclude "gems/*"'
+#end
 
 task :default => :test
 
