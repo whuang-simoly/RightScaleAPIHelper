@@ -31,6 +31,7 @@ Gem::Specification.new do |s|
     "test/test_RightScaleAPIHelper.rb"
   ]
   s.homepage = "http://github.com/evanwieren/RightScaleAPIHelper"
+  s.source = "http://github.com/evanwieren/RightScaleAPIHelper"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.15"
