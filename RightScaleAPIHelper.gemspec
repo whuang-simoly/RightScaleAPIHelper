@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "RightScaleAPIHelper"
-  s.version = "0.4.1"
+  s.version = "0.4.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Eric VanWieren"]
@@ -14,14 +14,12 @@ Gem::Specification.new do |s|
   s.email = "eric@codex.org"
   s.extra_rdoc_files = [
     "LICENSE.txt",
-    "README.markdown",
     "README.rdoc"
   ]
   s.files = [
     "Gemfile",
     "Gemfile.lock",
     "LICENSE.txt",
-    "README.markdown",
     "README.rdoc",
     "Rakefile",
     "RightScaleAPIHelper.gemspec",
@@ -31,7 +29,6 @@ Gem::Specification.new do |s|
     "test/test_RightScaleAPIHelper.rb"
   ]
   s.homepage = "http://github.com/evanwieren/RightScaleAPIHelper"
-  s.source = "http://github.com/evanwieren/RightScaleAPIHelper"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.15"
