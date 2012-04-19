@@ -49,7 +49,7 @@ module RightScaleAPIHelper
 
     def get(query)
       begin
-        puts "#{@api_call}#{query}#{@formatting}"
+        #puts "#{@api_call}#{query}#{@formatting}"
         resp = @conn.get("#{@api_call}#{query}#{@formatting}", @headers)
       rescue
         raise("Get query failed.\nError: #")
