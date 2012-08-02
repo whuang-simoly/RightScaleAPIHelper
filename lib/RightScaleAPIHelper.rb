@@ -25,7 +25,7 @@ module RightScaleAPIHelper
       @formatting = "?format=#{format}"
       @conn = Net::HTTP.new('my.rightscale.com', 443)
       @conn.use_ssl=true
-      #@conn.verify_mode = OpenSSL::SSL::VERIFY_NONE
+      @conn.verify_mode = OpenSSL::SSL::VERIFY_NONE
       if version != '1.0'
         raise("Only version 1.0 is supported")
       end
